@@ -1,0 +1,510 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.address-and-order .formularioModal {
+    top: 0;
+    left: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(240, 0%, 70%);
+    padding: 30px;
+}
+
+._field-bt-back {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    cursor: pointer;
+}
+.bt_addressVoltar {
+    display: flex;
+    width: auto;
+    justify-content: end;
+    background-color: transparent;
+    border: none;
+}
+.containerModal {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0;
+    background-color: rgba(254, 253, 253, 0.724);
+}
+.dados {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.pEndereco {
+    color: #222;
+    font-size: 28px;
+}
+.dadosName {
+    margin-top: 30px;
+    width: 50%;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.labelFormname {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+}
+.inputFormname {
+    margin-top: 5px;
+    width: 95%;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    height: 45px;
+    border-radius: 6px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.pFormname {
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+}
+
+.linhaNomeCpf {
+    display: flex;
+    width: 100%;
+    height: 125px;
+    margin: 0;
+    margin-top: 25px;
+}
+
+.dadosCpf {
+    margin-top: 30px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+.labelCpf {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.inputCpf {
+    width: 107%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.dadosCep {
+    width: 100%;
+    height: 75px;
+    margin-top: 25px;
+}
+.labelCep {
+    display: block;
+    color: rgba(0, 0, 0, 0.4);
+    height: 20px;
+    width: 100%;
+}
+.inputCep {
+    width: 35%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.dadosEstado {
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    height: 70px;
+    grid-gap: 20px;
+}
+.divEstado {
+    width: 100%;
+}
+.labelEstado {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    height: 20px;
+    width: 100%;
+}
+.inputEstado {
+    width: 72%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.divCidade {
+    width: 100%;
+}
+.labelCidade {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    height: 20px;
+    width: 100%;
+}
+.inputCidade {
+    width: 72%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.dadosBairro {
+    width: 100%;
+    height: 75px;
+    margin-top: 25px;
+}
+.labelBairro:nth-child(1) {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    height: 20px;
+}
+.inputBairro:nth-child(2) {
+    width: 35%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.dadosEndereco {
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    height: 70px;
+    grid-gap: 20px;
+}
+.divEndereco {
+    width: 100%;
+}
+.labelEndereco {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    height: 20px;
+    width: 100%;
+}
+.inputEndereco {
+    width: 72%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.labelNumero {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    height: 20px;
+    width: 100%;
+}
+.inputNumero {
+    width: 72%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.dadosNumero {
+    width: 100%;
+}
+.res p:nth-child(4) {
+    color: red;
+    font-size: 12px;
+}
+.dadosCep p:nth-child(3) {
+    color: red;
+    font-size: 12px;
+}
+.dadosOpcional {
+    margin-top: 25px;
+    width: 100%;
+}
+.labelOpcional {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    height: 20px;
+    width: 100%;
+}
+.inputOpcional {
+    margin-top: 25px;
+    width: 35%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.dadosLocal {
+    display: block;
+    margin-top: 25px;
+    width: 100%;
+}
+.dadosLocal label {
+    color: rgba(0, 0, 0, 0.6);
+}
+.divWork {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    grid-gap: 10px;
+}
+.divWork label {
+    color: rgba(0, 0, 0, 0.6);
+}
+.inputRadio {
+    width: 25px;
+    cursor: pointer;
+    border: none;
+}
+.dadosPhone {
+    margin-top: 25px;
+    width: 100%;
+}
+.labelPhone {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    height: 20px;
+    width: 100%;
+}
+.inputPhone {
+    width: 100%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    cursor: pointer;
+}
+.radioRes {
+    width: 25px;
+    margin-left: 5%;
+    outline: none;
+}
+/* .divWork  */
+.dadosAdicionais {
+    margin-top: 25px;
+    width: 100%;
+}
+.labelAdicional {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    height: 20px;
+    width: 100%;
+}
+.inputAdicional {
+    width: 100%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.divButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100px;
+}
+
+/* Estilo base para todos os botões */
+.divButton button {
+    border-radius: 6px;
+    display: inline-block;
+    font-family: Proxima Nova, -apple-system, Roboto, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 24px;
+    text-align: center;
+    width: auto;
+    cursor: pointer;
+    border: none;
+}
+
+/* Botão "Continuar" - primário */
+.divButton button:nth-child(1) {
+    background-color: #3483fa;
+    color: #fff;
+}
+
+/* Botão "Voltar" - secundário */
+.divButton button:nth-child(2) {
+    background-color: transparent;
+    color: #3483fa;
+    border: 2px solid #3483fa;
+}
+/* ================================== */
+._dataContact {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+}
+._dadosPhone {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    width: 100%;
+}
+
+._dadosEmail {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    width: 100%;
+    grid-column: 2;
+}
+
+._labelEmail {
+    width: 80%;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: start;
+}
+
+.inputEmail {
+    width: 80%;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    outline: 0;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .formularioModal {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .containerModal {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .linhaNomeCpf,
+    .dadosEstado,
+    .dadosEndereco {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+    }
+
+    .dadosName,
+    .dadosCpf,
+    .divEstado,
+    .divCidade,
+    .divEndereco,
+    .dadosNumero {
+        width: 100%;
+    }
+
+    .inputFormname,
+    .inputCpf,
+    .inputCep,
+    .inputEstado,
+    .inputCidade,
+    .inputBairro:nth-child(2),
+    .inputEndereco,
+    .inputNumero,
+    .inputOpcional,
+    .inputPhone {
+        width: 100% !important;
+    }
+
+    .inputRadio {
+        width: 20px;
+    }
+
+    .pEndereco {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .bt_addressVoltar {
+        justify-content: center;
+    }
+}

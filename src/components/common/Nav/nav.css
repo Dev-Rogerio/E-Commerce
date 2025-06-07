@@ -1,0 +1,450 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --accent-color: #ff5722;
+    --text-color: #222;
+    --bg-light: #f9f9f9;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    color: #222;
+    background: #fff;
+}
+
+/* Header e nav */
+
+._nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 999;
+}
+
+._nav-left {
+    flex: 1;
+}
+
+._nav-center {
+    flex: 3;
+    text-align: center;
+}
+
+._logo {
+    max-height: 50px;
+    vertical-align: middle;
+}
+
+._logo-title {
+    font-family: "Bodoni", serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    vertical-align: middle;
+}
+
+/* Menu desktop */
+._nav-right {
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+}
+
+._nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+._nav-menu li a {
+    position: relative;
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+}
+
+/* Novo efeito: sublinhado animado */
+._nav-menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #ff5722; /* cor do sublinhado */
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+._nav-menu li a:hover::after,
+._nav-menu li a.highlighted::after {
+    width: 100%;
+}
+
+._nav-menu li a:hover,
+._nav-menu li a.highlighted {
+    color: #ff5722; /* cor do texto no hover */
+    background-color: transparent; /* removido o background anterior */
+}
+
+/* Cabeçalho com fundo cinza */
+._headContainer {
+    background-color: #808080;
+    color: #fff;
+}
+
+/* Submenu */
+._submenu-parent {
+    position: relative;
+}
+
+._submenu {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    background-color: #222;
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    display: none;
+    flex-direction: column;
+    min-width: 140px;
+    z-index: 100;
+}
+
+._submenu-parent:hover > .submenu {
+    display: flex;
+}
+
+._submenu li a {
+    margin-top: -20px;
+    padding: 0.4rem 1rem;
+    width: 160px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    color: #ddd;
+    font-weight: normal;
+    font-size: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+._submenu li a:hover {
+    background-color: #666666;
+    color: #fff;
+}
+
+._iconMenu {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: #fff;
+}
+
+/* Hamburger - mobile */
+._hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+._hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s linear;
+}
+
+._hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+._hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+._hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Nav-right mobile */
+._nav-right.open {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #808080;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+._nav-right {
+    display: flex;
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+    ._nav-center {
+        flex: 1;
+        text-align: left;
+    }
+
+    ._nav-left {
+        flex: 0;
+    }
+
+    ._nav-right {
+        display: none;
+        flex-direction: column;
+    }
+
+    ._nav-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    ._nav-menu li {
+        margin-bottom: 0.75rem;
+        text-align: center;
+    }
+
+    ._submenu {
+        position: static;
+        display: none !important;
+        background: none;
+        padding: 0;
+        flex-direction: column;
+        background-color: #444444;
+    }
+
+    ._submenu-parent:hover > ._submenu,
+    ._submenu-parent:focus-within > ._submenu {
+        display: none !important;
+    }
+
+    ._hamburger {
+        display: flex;
+    }
+}
+
+/* Main Content */
+
+._main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Capa full width */
+._cover-section {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+._cover-section .text-block {
+    flex: 1 1 350px;
+    max-width: 600px;
+}
+
+._cover-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #111;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+._cover-section p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+._cover-image {
+    flex: 1 1 600px;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Grid das imagens pequenas */
+._gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+._gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.15);
+    transition: transform 0.3s ease;
+}
+
+._gallery-item:hover {
+    transform: scale(1.03);
+}
+
+._gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+._img-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.25rem 0.75rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+/* Footer */
+
+._footer {
+    background-color: #1e1e1e;
+    color: #ccc;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+._social-section p {
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+._social-icons a {
+    margin: 0 0.5rem;
+    color: #ead9a1;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+._social-icons a:hover {
+    color: #82ee84;
+}
+
+._address-section p {
+    font-size: 0.9rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+    color: #bbb;
+}
+
+/* Mapa */
+._map-section {
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+._map-section img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+._click-hint {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: #ff5722;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    user-select: none;
+}
+
+/* Botão flutuante do WhatsApp */
+._whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+._whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    ._cover-section {
+        flex-direction: column;
+    }
+
+    ._cover-section ._text-block,
+    ._cover-section ._cover-image {
+        max-width: 100%;
+    }
+
+    ._gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    ._cover-section h2 {
+        font-size: 1.5rem; /* ou ajuste conforme desejar */
+        text-align: center; /* opcional, se quiser centralizar */
+    }
+    ._logo-title {
+        font-size: 1rem;
+        text-align: center;
+        display: block;
+        margin-top: 0.25rem;
+    }
+
+    ._nav-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        text-align: center;
+    }
+
+    ._logo {
+        max-height: 40px;
+    }
+}
