@@ -16,6 +16,7 @@
     pointer-events: none; /* Impede que o componente receba eventos do mouse */
     transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
 }
+
 .modal-address {
     display: none;
     position: fixed;
@@ -30,6 +31,9 @@
 }
 .modal-address.active {
     display: flex;
+}
+.textVideo {
+    font-size: 10px !important;
 }
 .divLeft-Sales {
     margin-left: 20px;

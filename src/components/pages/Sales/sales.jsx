@@ -113,7 +113,7 @@ const Sales = ({ price }) => {
 
     useEffect(() => {
         // const total = 476 * quantidade;
-        const total = 1 * quantidade;
+        const total = 476 * quantidade;
         const inteiro = Math.floor(total);
         const decimal = (total % 1).toFixed(2).split(".")[1] || "00";
 
@@ -407,24 +407,27 @@ const Sales = ({ price }) => {
                             </p>
                         </div>
 
-                        <div className="div-move">
+                        {/* <div className="div-move">
                             <div className="moveOne">
                                 <div>
                                     <video width="100%" controls>
                                         <source
-                                            src="/videos/video1.mp4"
+                                            src="https://www.youtube.com/watch?v=VNl5TF-zwQc"
                                             type="video/mp4"
                                         />
                                         Seu navegador não suporta vídeo.
                                     </video>
                                 </div>
-                                <span>
-                                    Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Cum, officia nobis. Sequi
-                                    nulla perferendis quas? Expedita nisi
-                                    delectus eaque dolor voluptates consequatur
-                                    et autem distinctio exercitationem nemo
-                                    explicabo, temporibus ad?
+                                <span className="textVideo">
+                                    ✨ Conheça a elegância da alfaiataria
+                                    personalizada com a Kamisaria Zanuto! No
+                                    vídeo de hoje, apresentamos nossa camisa de
+                                    alfaiatária, feita sob medida para você que
+                                    valoriza conforto, estilo e qualidade. Ideal
+                                    para ocasiões especiais ou para o dia a dia
+                                    com classe. 🔹 Tecido premium 100% algodão
+                                    🔹 Feita na medida com acabamento de
+                                    alfaiataria 🔹
                                 </span>
                             </div>
                             <div className="moveTwo">
@@ -444,6 +447,52 @@ const Sales = ({ price }) => {
                                     delectus eaque dolor voluptates consequatur
                                     et autem distinctio exercitationem nemo
                                     explicabo, temporibus ad?
+                                </span>
+                            </div>
+                        </div> */}
+
+                        <div className="div-move">
+                            <div className="video-coluna">
+                                <div className="video-wrapper">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/VNl5TF-zwQc"
+                                        title="Vídeo YouTube"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                                <span className="textVideo">
+                                    ✨ Conheça a elegância da alfaiataria
+                                    personalizada com a Kamisaria Zanuto!
+                                    Apresentamos nossa camisa de alfaiataria,
+                                    feita sob medida para quem valoriza
+                                    conforto, estilo e qualidade. 🔹 Tecido
+                                    premium 100% algodão 🔹 Acabamento impecável
+                                    🔹
+                                </span>
+                            </div>
+
+                            <div className="video-coluna">
+                                <div className="video-wrapper">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/LBf7HQ49uIo"
+                                        title="Vídeo YouTube"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                                <span className="textVideo">
+                                    O renomado jornalista Roberto Motta visitou
+                                    a Kamisaria Zanuto, no Brooklin – São Paulo,
+                                    para uma entrevista especial com Marco
+                                    Antonio Jordão, sócio da Adolfo Turrion. A
+                                    gravação aconteceu em um ambiente
+                                    sofisticado, gentilmente disponibilizado por
+                                    Marivone Aucelli, proprietária da Kamisaria
+                                    Zanuto. Uma união de estilo, tradição e
+                                    grandes nomes do empreendedorismo.
                                 </span>
                             </div>
                         </div>

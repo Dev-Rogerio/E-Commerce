@@ -147,7 +147,8 @@ app.post("/send-email", async (req, res) => {
       ${observacao ? `<p><strong>Observação:</strong> ${observacao}</p>` : ""}
       <p><strong>Telefone:</strong> ${telefone}</p>
       <p><strong>Local de entrega:</strong> ${local}</p>
-      <p><strong>Camisa:</strong> Tamanho ${tamanho}, Cor ${cor}</p>
+      <p><strong>Camisa:</strong> Tamanho ${tamanho}</p>
+      <p><strong>Cor:</strong> Cor ${cor}</p>     
       <p><strong>Quantidade:</strong> ${quantidade}</p>
       <p><strong>Valor da Camisa:</strong> R$ ${Number(valorCompra)
           .toFixed(2)
